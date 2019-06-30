@@ -11,6 +11,7 @@ class Player {
     osc.connect(gainControl);
     gainControl.connect(context.destination);
 
+    osc.frequency.setValueAtTime(frequency, context.currentTime);
     osc.start();
 
     this.osc = osc;
@@ -37,6 +38,6 @@ class Player {
   }
 }
 
-const defaultPlayer = new Player({type: 'sine'});
-const sawPlayer = new Player({type: 'sawtooth'});
+const defaultPlayer = new Player({frequency: 440, type: 'sine'});
+const sawPlayer = new Player({frequency: 300, type: 'sawtooth'});
 

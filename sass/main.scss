@@ -1,0 +1,67 @@
+@import './colors';
+@import './door';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: colorfade;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@keyframes colorfade {
+  from {
+    background-color: rgb(254, 170, 246);
+  }
+
+  75% {
+    background-color: rgb(170, 241, 254);
+  }
+
+  to {
+    background-color: rgb(254, 170, 246);
+  }
+}
+
+@keyframes background-dance {
+  from {
+    background-size: 300% 300%;
+    background-position: 0% 0%;
+  }
+
+  15% {
+    background-size: 300% 300%;
+    background-position: 100% 100%;
+  }
+
+  34% {
+    background-size: 300% 300%;
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-size: 300% 300%;
+    background-position: 50% 100%;
+  }
+
+  67% {
+    background-size: 300% 300%;
+    background-position: 0% 100%;
+  }
+
+  85% {
+    background-size: 300% 300%;
+    background-position: 50% 50%;
+  }
+
+  to {
+    background-size: 300% 300%;
+    background-position: 0% 0%;
+  }
+}
+
